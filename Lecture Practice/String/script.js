@@ -190,3 +190,11 @@
     let str = "   Ravindra Kachariya   ";
     console.log(str.trimStart());
 }
+
+/* 23. trimEnd() 
+   -> Removes whitespace from the end of a string. */
+{
+    console.log("------ trimEnd() --------");
+    let str = "   Ravindra Kachariya   ";
+    console.log(str.trimEnd());
+}
