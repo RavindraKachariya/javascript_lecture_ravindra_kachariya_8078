@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer & Quote Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="min-h-screen bg-gray-900 text-gray-100 font-inter flex flex-col justify-between"
+  >
+    <!-- HEADER -->
+    <header class="text-center py-8 border-b border-gray-800">
+      <h1 class="text-4xl font-bold tracking-tight text-white">
+        Countdown Timer & Quote Generator
+      </h1>
+      <p class="text-gray-400 mt-2 text-sm">
+        Stay focused, code better, and stay inspired 🇮🇳
+      </p>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main
+      class="flex flex-col md:flex-row justify-center items-stretch gap-8 px-6 py-10 max-w-6xl mx-auto w-full"
+    >
+      <!-- TIMER APP -->
+      <section
+        class="flex-1 bg-gray-800/70 border border-gray-700 rounded-2xl p-8 flex flex-col justify-between items-center text-center shadow-lg hover:shadow-xl transition"
+      >
+        <div>
+          <h2 class="text-2xl font-semibold mb-4 text-indigo-300">
+            ⏳ Countdown Timer
+          </h2>
+          <div id="display" class="text-7xl font-bold mb-4 text-indigo-400">
+            0
+          </div>
+          <input
+            id="timeInput"
+            type="number"
+            placeholder="Enter seconds"
+            class="w-full rounded-lg border border-gray-700 bg-gray-900 p-3 text-center mb-5 text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+          <div class="flex justify-center gap-3">
+            <button
+              id="startBtn"
+              class="bg-indigo-500 text-white px-6 py-2 rounded-lg hover:bg-indigo-600 transition"
+            >
+              Start
+            </button>
+            <button
+              id="stopBtn"
+              class="bg-gray-700 text-gray-200 px-6 py-2 rounded-lg hover:bg-gray-600 transition"
+            >
+              Stop
+            </button>
+          </div>
+        </div>
+        <p
+          id="message"
+          class="mt-6 text-base font-medium text-gray-400 h-6"
+        ></p>
+      </section>
+
+      <!-- QUOTE GENERATOR -->
+      <section
+        class="flex-1 bg-gray-800/70 border border-gray-700 rounded-2xl p-8 flex flex-col justify-between text-center shadow-lg hover:shadow-xl transition"
+      >
+        <div>
+          <h2 class="text-2xl font-semibold mb-4 text-indigo-300">
+            💭 Quote Generator
+          </h2>
+          <p
+            id="quoteText"
+            class="text-xl italic font-light leading-relaxed min-h-[80px] text-gray-200"
+          >
+            "Loading quote..."
+          </p>
+          <p id="authorText" class="text-sm text-gray-400 mt-3 mb-6">
+            – Author
+          </p>
+        </div>
+        <button
+          id="newQuoteBtn"
+          class="bg-indigo-500 text-white px-6 py-2 rounded-lg hover:bg-indigo-600 transition"
+        >
+          New Quote
+        </button>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="text-center py-5 border-t border-gray-800 text-sm text-gray-500"
+    >
+      Made with ❤️ by
+      <span class="font-semibold text-indigo-400">Ravindra Kachariya</span>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+  </body>
+</html>
