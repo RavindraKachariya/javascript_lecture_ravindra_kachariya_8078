@@ -1,0 +1,14 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Rinkeh",
+      "grid": "12025",
+      "email": "student@gmail.com",
+      "age": "21",
+      "mobile": "+91 98765 43210",
+      "gender": "Male",
+      "course": "HTML"
+    }
+  ]
+}
