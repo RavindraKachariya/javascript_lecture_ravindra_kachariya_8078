@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corona API</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+  <div class="bg-white w-full max-w-md p-6 rounded-2xl shadow-xl">
+
+    <h1 class="text-2xl font-bold text-center mb-4">COVID-19 Country Data</h1>
+
+    <!-- Input Section -->
+    <div class="flex gap-2 mb-3">
+      <input id="countryInput" type="text" placeholder="Enter country name"
+        class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+
+      <button id="getData" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg">
+        Search
+      </button>
+    </div>
+
+    <!-- Error Box -->
+    <p id="error" class="text-red-500 text-center mb-3 font-medium"></p>
+
+    <!-- Result Box -->
+    <div id="result" class="mt-4"></div>
+
+  </div>
+
+  <!-- Link JS File -->
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

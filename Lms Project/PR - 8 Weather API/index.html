@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App - Tailwind</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-blue-50 flex justify-center p-6">
+
+    <div class="w-full max-w-md bg-white shadow-xl rounded-2xl p-6">
+
+        <!-- Title -->
+        <h1 class="text-3xl font-bold text-blue-700 text-center mb-4">
+            🌤 Weather Forecast
+        </h1>
+
+        <!-- Search -->
+        <div class="flex gap-2 mb-3">
+            <input id="cityInput" type="text" class="w-full border rounded-lg px-3 py-2 focus:outline-blue-500"
+                placeholder="Enter city name..." />
+
+            <button id="searchBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+                Search
+            </button>
+        </div>
+
+        <!-- Error -->
+        <p id="error" class="text-red-500 text-center mb-2"></p>
+
+        <!-- Loader -->
+        <div id="loader" class="hidden flex justify-center my-4">
+            <div class="w-10 h-10 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
+        </div>
+
+        <!-- Weather Card -->
+        <div id="weatherCard" class="hidden bg-blue-50 p-5 rounded-xl">
+
+            <h2 id="cityName" class="text-xl font-bold text-center mb-4"></h2>
+
+            <div class="grid grid-cols-2 gap-4">
+
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                    <p id="temp" class="text-2xl font-bold"></p>
+                    <p class="text-gray-500 text-sm">Temperature</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                    <img id="icon" class="w-16 h-16 mx-auto" />
+                    <p id="description" class="capitalize"></p>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                    <p id="humidity" class="text-xl font-bold"></p>
+                    <p class="text-gray-500 text-sm">Humidity</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                    <p id="wind" class="text-xl font-bold"></p>
+                    <p class="text-gray-500 text-sm">Wind</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow text-center col-span-2">
+                    <p id="feels" class="text-xl font-bold"></p>
+                    <p class="text-gray-500 text-sm">Feels / Min / Max</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
