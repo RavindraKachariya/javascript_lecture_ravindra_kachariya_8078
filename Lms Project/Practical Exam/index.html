@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Website Title -->
+    <title>Product Page with CRUD Operations</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <h1 class="text-3xl font-bold text-center py-5">Product CRUD - JavaScript + LocalStorage</h1>
+
+    <!-- Form Section -->
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow mb-6">
+        <h2 class="text-xl font-semibold mb-4">Add / Update Product</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <input type="text" id="title" placeholder="Product Title" class="border p-2 rounded w-full" />
+
+            <input type="number" id="price" placeholder="Price" class="border p-2 rounded w-full" />
+
+            <input type="text" id="image" placeholder="Image URL" class="border p-2 rounded w-full" />
+
+            <input type="text" id="category" placeholder="Category" class="border p-2 rounded w-full" />
+        </div>
+
+        <button id="addBtn" onclick="addProduct()"
+            class="mt-4 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
+            Add Product
+        </button>
+
+        <button id="updateBtn" onclick="updateProduct()"
+            class="mt-4 bg-green-600 text-white px-6 py-2 rounded hidden hover:bg-green-700">
+            Update Product
+        </button>
+    </div>
+
+    <!-- Search, Filter, Sort -->
+    <div class="max-w-4xl mx-auto bg-white p-4 rounded-xl shadow mb-6 flex flex-wrap gap-4 justify-around">
+        <input type="text" id="search" placeholder="Search by title" onkeyup="renderProducts()"
+            class="border p-2 rounded w-full md:w-1/4" />
+
+        <select id="filterCategory" onchange="renderProducts()" class="border p-2 rounded w-full md:w-1/4">
+            <option value="">All Category</option>
+        </select>
+
+        <select id="sortPrice" onchange="renderProducts()" class="border p-2 rounded w-full md:w-1/4">
+            <option value="">Sort by Price</option>
+            <option value="low">Low -> High</option>
+            <option value="high">High -> Low</option>
+        </select>
+    </div>
+
+    <!-- Product List -->
+    <div id="productList" class="max-w-4xl mx-auto grid md:grid-cols-3 gap-5 p-2"></div>
+
+    <!-- JavaScript -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
