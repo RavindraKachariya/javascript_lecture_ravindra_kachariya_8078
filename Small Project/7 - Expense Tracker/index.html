@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex justify-center p-5">
+    <main class="bg-white w-full max-w-md shadow-lg rounded-lg p-6">
+
+        <!-- Header Balance -->
+        <header class="bg-indigo-600 text-white text-center rounded-lg p-4 mb-4">
+            <h2 class="text-3xl font-bold" id="balance">₹0.00</h2>
+            <div class="flex justify-around pt-2 text-sm">
+                <span>Income: <span id="income" class="text-green-300 font-semibold">₹0.00</span></span>
+                <span>Expense: <span id="expense" class="text-red-300 font-semibold">₹0.00</span></span>
+            </div>
+        </header>
+
+        <!-- Filters -->
+        <h3 class="font-semibold mb-1">Filter</h3>
+        <div class="mt-2 mb-3">
+            <select id="filter" class="w-full p-2 border rounded">
+                <option value="all">All</option>
+                <option value="today">Today</option>
+                <option value="week">Week</option>
+                <option value="month">Month</option>
+            </select>
+        </div>
+
+        <!-- Transaction List -->
+        <section>
+            <h3 class="font-semibold mb-1">Transactions</h3>
+            <ul id="transactionList" class="h-48 border rounded p-2 overflow-y-auto"></ul>
+        </section>
+
+        <!-- Add Transaction -->
+        <section class="mt-4">
+            <h3 class="font-semibold mb-2">Add Transaction</h3>
+
+            <div class="flex mb-3 bg-gray-200 rounded-lg p-1 w-full">
+                <button id="btnIncome" class="flex-1 py-2 rounded-lg font-semibold text-center bg-green-500 text-white">
+                    Income
+                </button>
+                <button id="btnExpense" class="flex-1 py-2 rounded-lg font-semibold text-center">
+                    Expense
+                </button>
+            </div>
+
+            <form id="transactionForm" class="grid grid-cols-2 gap-3">
+                <input id="name" type="text" placeholder="Name" class="col-span-2 p-2 border rounded" required>
+                <input id="amount" type="number" min="1" class="p-2 border rounded" required>
+                <input id="date" type="date" class="p-2 border rounded" required>
+
+                <select id="category" class="col-span-2 p-2 border rounded">
+                    <option value="General">General</option>
+                    <option value="Food">Food</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Bills">Bills</option>
+                </select>
+
+                <button type="submit" class="col-span-2 bg-indigo-600 text-white py-2 rounded font-semibold">
+                    Add
+                </button>
+            </form>
+        </section>
+
+        <!-- Graph -->
+        <h3 class="font-semibold mt-4">Monthly Chart</h3>
+        <canvas id="chart" height="150"></canvas>
+
+        <button id="exportCSV" class="w-full bg-black text-white py-2 rounded mb-3 mt-4">Export CSV</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
