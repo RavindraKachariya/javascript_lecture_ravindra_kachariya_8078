@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Lot System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="max-w-5xl mx-auto mt-10 p-6 shadow-xl rounded-xl bg-white">
+        <h1 class="text-3xl font-bold text-center mb-5">Parking Lot System</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+            <input id="vehicleNumber" type="text" placeholder="Enter Vehicle Number (e.g. GJ01AB1234)"
+                class="border px-3 py-2 rounded-lg outline-none focus:ring-2 focus:ring-blue-500">
+
+            <select id="vehicleType" class="border px-3 py-2 rounded-lg outline-none">
+                <option value="Car">Car</option>
+                <option value="Bike">Bike</option>
+            </select>
+
+            <select id="plateColor" class="border px-3 py-2 rounded-lg outline-none">
+                <option value="white">White (Private)</option>
+                <option value="yellow">Yellow (Commercial)</option>
+                <option value="black">Black (Rental)</option>
+            </select>
+
+            <button id="addBtn" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Add
+                Vehicle</button>
+        </div>
+
+        <table class="w-full border-collapse">
+            <thead>
+                <tr class="bg-blue-600 text-white">
+                    <th class="p-2 border">Number Plate</th>
+                    <th class="p-2 border">Vehicle Type</th>
+                    <th class="p-2 border">Entry Time</th>
+                    <th class="p-2 border">Action</th>
+                </tr>
+            </thead>
+            <tbody id="parkingTable"></tbody>
+        </table>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
