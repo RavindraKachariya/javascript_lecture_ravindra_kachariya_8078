@@ -6,123 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ravi Creation</title>
 
-    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800">
 
     <!-- Navbar -->
     <nav class="bg-white shadow sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <h1 class="text-2xl font-bold tracking-wide">
+            <h1 class="text-2xl font-bold">
                 Ravi <span class="text-yellow-600">Creation</span>
             </h1>
-
-            <div class="hidden md:flex items-center space-x-6 text-sm">
-                <a class="hover:text-yellow-600 transition" href="#">Home</a>
-                <a class="hover:text-yellow-600 font-semibold text-yellow-700" href="#">Shop</a>
-                <a class="hover:text-yellow-600 transition" href="#">Custom</a>
-                <a class="hover:text-yellow-600 transition" href="#">Contact</a>
-            </div>
-
-            <i class="fa fa-user text-gray-700 text-xl"></i>
+            <i class="fa fa-user text-xl"></i>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="max-w-5xl mx-auto px-6 py-16 text-center">
-        <p class="text-yellow-600 font-medium mb-3 text-xl">Premium • Handmade • Modern</p>
+    <!-- Layout -->
+    <div class="max-w-7xl mx-auto px-6 py-8 flex gap-6">
 
-        <h2 class="text-5xl font-extrabold leading-tight mb-4">
-            Premium Car Hanging Decor for Your Car
-        </h2>
-
-        <p class="text-gray-600 mb-6 text-lg max-w-2xl mx-auto">
-            Minimal, elegant & handcrafted pieces designed to elevate your car.
-        </p>
-
-        <a href="#products"
-            class="inline-block bg-yellow-600 text-white px-8 py-3 rounded-full shadow-lg hover:bg-yellow-700 transition font-semibold">
-            Explore Now
-        </a>
-    </header>
-
-    <!-- Main Section -->
-    <div class="max-w-7xl mx-auto px-6 py-10 flex gap-6">
-
-        <!-- Product List -->
-        <main class="flex-1 pr-2" id="products">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-2xl font-bold">Featured Products</h3>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-
-                <!-- Product 1 -->
-                <div
-                    class="bg-white rounded-xl p-4 shadow hover:shadow-xl transition border-gray-200 border flex flex-col h-full">
-                    <img src="./assets/image/gw.jpg" class="h-40 rounded-lg object-cover mb-4">
-                    <h4 class="font-bold text-gray-900">Ganpati Bapa</h4>
-                    <p class="text-yellow-600 font-bold text-lg mb-3">₹399</p>
-                    <button class="mt-auto bg-yellow-600 text-white py-2 rounded-lg font-medium add-btn">
-                        Add to Cart
-                    </button>
-                </div>
-
-                <!-- Product 2 -->
-                <div
-                    class="bg-white rounded-xl p-4 shadow hover:shadow-xl transition border-gray-200 border flex flex-col h-full">
-                    <img src="./assets/image/bw.jpg" class="h-40 rounded-lg object-cover mb-4">
-                    <h4 class="font-bold text-gray-900">Mahadev</h4>
-                    <p class="text-yellow-600 font-bold text-lg mb-3">₹399</p>
-                    <button class="mt-auto bg-yellow-600 text-white py-2 rounded-lg font-medium add-btn">
-                        Add to Cart
-                    </button>
-                </div>
-
-                <!-- Product 3 -->
-                <div
-                    class="bg-white rounded-xl p-4 shadow hover:shadow-xl transition border-gray-200 border flex flex-col h-full">
-                    <img src="./assets/image/rkw.png" class="h-40 rounded-lg object-cover mb-4">
-                    <h4 class="font-bold text-gray-900">Radha Krishna</h4>
-                    <p class="text-yellow-600 font-bold text-lg mb-3">₹399</p>
-                    <button class="mt-auto bg-yellow-600 text-white py-2 rounded-lg font-medium add-btn">
-                        Add to Cart
-                    </button>
-                </div>
-
-                <!-- Product 4 -->
-                <div
-                    class="bg-white rounded-xl p-4 shadow hover:shadow-xl transition border-gray-200 border flex flex-col h-full">
-                    <img src="./assets/image/budha.jpg" class="h-40 rounded-lg object-cover mb-4">
-                    <h4 class="font-bold text-gray-900">Lord Buddha</h4>
-                    <p class="text-yellow-600 font-bold text-lg mb-3">₹399</p>
-                    <button class="mt-auto bg-yellow-600 text-white py-2 rounded-lg font-medium add-btn">
-                        Add to Cart
-                    </button>
-                </div>
-
-            </div>
+        <!-- PRODUCTS -->
+        <main class="flex-1">
+            <h2 class="text-2xl font-bold mb-6">Products</h2>
+            <div id="product-list" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
         </main>
 
-        <!-- Cart View -->
-        <aside
-            class="w-80 bg-white shadow-xl p-5 sticky top-20 h-[85vh] overflow-y-auto border border-gray-200 rounded-xl flex flex-col">
-            <h2 class="text-2xl font-bold mb-4">🛒 Cart</h2>
+        <!-- CART -->
+        <aside class="w-80 bg-white shadow-xl p-5 sticky top-24 h-[80vh] rounded-xl flex flex-col">
+            <h2 class="text-xl font-bold mb-4">🛒 Cart</h2>
 
-            <div id="cart-items" class="space-y-3 flex-1"></div>
+            <div id="cart-items" class="space-y-4 flex-1 overflow-y-auto"></div>
 
-            <div class="mt-6 border-t pt-4">
-                <div class="flex justify-between text-xl font-bold mb-4">
-                    <span>Total:</span>
+            <div class="border-t pt-4">
+                <div class="flex justify-between text-lg font-bold mb-4">
+                    <span>Total</span>
                     <span id="cart-total">₹0</span>
                 </div>
-
-                <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 rounded-xl">
+                <button class="w-full bg-yellow-500 hover:bg-yellow-600 font-bold py-3 rounded-xl">
                     Checkout
                 </button>
             </div>
@@ -130,14 +50,15 @@
 
     </div>
 
-    <!-- Footer Section -->
-    <footer class="bg-white border-t mt-12 py-10 text-center text-sm text-gray-600">
-        © 2025 Ravi Creation — Premium Handmade Decor
-    </footer>
+    <!-- PRODUCT VIEW MODAL -->
+    <div id="product-modal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+        <div class="bg-white max-w-4xl w-full mx-4 rounded-xl p-6 relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-xl font-bold">✕</button>
+            <div id="modal-content" class="grid md:grid-cols-2 gap-6"></div>
+        </div>
+    </div>
 
-    <!-- JavaScript -->
     <script src="./js/script.js"></script>
-
 </body>
 
 </html>
